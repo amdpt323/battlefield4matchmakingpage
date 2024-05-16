@@ -8,104 +8,108 @@ import Map from './Map'
 const ServerInfo = () => {
   const setting = [
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'REGION',
+      value: 'EUROPE - DE',
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'PUNKBASTER',
+      value: 'ON',
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'FAIRFIGHT',
+      value: 'ON',
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'PASSWORD',
+      value: 'OFF',
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
-    },
-    {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'PRESET',
+      value: 'NORMAL',
     },
   ]
   const advanced = [
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'MINIMAP',
+      value: 'ON',
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'ONLY SQUAD LEADER SPAWN',
+      value: 'OFF',
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'VEHICLES',
+      value: 'ON',
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'TEAM BALANCE',
+      value: 'ON',
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'MINIMAP SPOTTING',
+      value: 'ON',
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'HUD',
+      value: 'ON',
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: '3P VEHICLE CAM',
+      value: 'ON',
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'REGENERATIVE HEALTH',
+      value: 'ON',
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'KILL CAM',
+      value: 'ON',
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'FRIENDLY FIRE',
+      value: 'OFF',
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: '3D SPOTTING',
+      value: 'ON',
+    },
+    {
+      name: 'ENEMY NAME TAGS',
+      value: 'ON',
     },
   ]
   const rules = [
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'TICKETS',
+      value: 400,
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'VEHICLE SPAWN DELAY',
+      value: 25,
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'BULLET DAMAGE',
+      value: 100,
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'KICK AFTER TEAM KILLS',
+      value: 5,
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'PLAYER HEALTH',
+      value: 100,
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'PLAYER RESPAWN TIME',
+      value: 100,
     },
     {
-      info: 'REGION',
-      value: 'EUROPE/DE',
+      name: 'KICK AFTER IDLE',
+      value: 300,
+    },
+    {
+      name: 'BAN AFTER KICKS',
+      value: 3,
     },
   ]
 
@@ -227,21 +231,21 @@ const ServerInfo = () => {
           <div className='statl'>
             {setting.map((item, index) => {
               return (
-                <ButtonButtom key={index} info={item.info} value={item.value} />
+                <ButtonButtom key={index} info={item.name} value={item.value} />
               )
             })}
           </div>
           <div className='statm'>
             {advanced.map((item, index) => {
               return (
-                <ButtonButtom key={index} info={item.info} value={item.value} />
+                <ButtonButtom key={index} info={item.name} value={item.value} />
               )
             })}
           </div>
           <div className='statr'>
             {rules.map((item, index) => {
               return (
-                <ButtonButtom key={index} info={item.info} value={item.value} />
+                <ButtonButtom key={index} info={item.name} value={item.value} />
               )
             })}
           </div>
