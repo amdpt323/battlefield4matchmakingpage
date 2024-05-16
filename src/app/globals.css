@@ -1,33 +1,161 @@
-@tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap')
+  @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding: 0;
+  margin: 0;
+  cursor: none;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+::-webkit-scrollbar {
+  display: none;
 }
+
+.server {
+  background-image: url('/bgimage.jpeg');
+  background-size: 140% 140%;
+  background-position: center -20px;
+  display: flex;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 15px;
+  height: 22px;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url('/cursor.png');
+  background-size: cover;
+}
+
+.sidebar-left {
+  flex: 0 0 4%;
+  overflow: scroll;
+  border-right: 0.1px solid grey;
+  box-sizing: border-box;
+}
+
+.server-info {
+  flex: 0 0 71%;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+
+.sidebar-right {
+  flex: 0 0 20%;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+
+.server-info-top {
+}
+
+.server-info-bottom {
+  overflow: scroll;
+  border-right: 0.1px solid grey;
+  height: 80vh;
+}
+
+.stat {
+  display: flex;
+}
+
+.statl {
+  flex: 0 0 33%;
+  box-sizing: border-box;
+}
+
+.statm {
+  flex: 0 0 34%;
+  box-sizing: border-box;
+}
+
+.statr {
+  flex: 0 0 33%;
+  box-sizing: border-box;
+}
+
+.custom-button-full {
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 70px;
+  margin-left: 15px;
+  margin-top: 10px;
+  border: 0.1px solid grey;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.custom-button-full:hover {
+  background-color: white;
+  color: black;
+}
+
+.custom-button-bottom {
+  background-color: transparent;
+  color: white;
+  padding: 10px 40px;
+  margin: 5px 15px;
+  border-bottom: 0.1px solid grey;
+  transition: background-color 0.3s ease;
+  font-size: 13px;
+}
+
+.custom-button-bottom:hover {
+  background-color: white;
+  color: black;
+  padding: 12px 42px;
+  border: none;
+  font-size: 13px;
+}
+
+.map-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.map {
+  background-color: #1d2226;
+}
+
+.map:hover {
+  background-color: white;
+}
+
+.map:hover p {
+  color: black;
+}
+
+.map:hover img {
+  transform: translate3d(0px, -0.7vh, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+.icon img{
+  filter: opacity(50%);
+}
+.icon:hover img{
+  filter: opacity(100%);
+}
+
+.expanded{
+  background-color:rgb(27, 38, 46,0.8);
+  width:205px;
+  
+}
+
+.expanded img{
+  padding-left:20px;
+}
+
+
+
+
